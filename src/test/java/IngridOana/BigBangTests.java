@@ -1,16 +1,16 @@
 package IngridOana;
 
-import domain.Nota;
-import domain.Pair;
-import domain.Student;
-import domain.Tema;
+import IngridOana.domain.Nota;
+import IngridOana.domain.Pair;
+import IngridOana.domain.Student;
+import IngridOana.domain.Tema;
 import org.junit.Before;
 import org.junit.Test;
-import repository.*;
-import service.Service;
-import validation.NotaValidator;
-import validation.StudentValidator;
-import validation.TemaValidator;
+import IngridOana.repository.*;
+import IngridOana.service.Service;
+import IngridOana.validation.NotaValidator;
+import IngridOana.validation.StudentValidator;
+import IngridOana.validation.TemaValidator;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -34,9 +34,9 @@ public class BigBangTests {
 
         //
 
-        StudentXMLRepository fileRepository1 = new StudentXMLRepository(new StudentValidator(), "LabAssiAsseProjectV01\\studenti.xml");
-        TemaXMLRepository fileRepository2 = new TemaXMLRepository(new TemaValidator(), "LabAssiAsseProjectV01\\teme.xml");
-        NotaXMLRepository fileRepository3 = new NotaXMLRepository(new NotaValidator(), "LabAssiAsseProjectV01\\note.xml");
+        StudentXMLRepository fileRepository1 = new StudentXMLRepository(new StudentValidator(), "C:\\Users\\ynghy\\Desktop\\lab1ssvv\\src\\main\\java\\IngridOana\\studenti.xml");
+        TemaXMLRepository fileRepository2 = new TemaXMLRepository(new TemaValidator(), "C:\\Users\\ynghy\\Desktop\\lab1ssvv\\src\\main\\java\\IngridOana\\teme.xml");
+        NotaXMLRepository fileRepository3 = new NotaXMLRepository(new NotaValidator(), "C:\\Users\\ynghy\\Desktop\\lab1ssvv\\src\\main\\java\\IngridOana\\note.xml");
 
         service = new Service(fileRepository1, fileRepository2, fileRepository3);
     }

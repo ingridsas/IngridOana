@@ -1,13 +1,13 @@
 package IngridOana;
 
-import domain.Student;
-import domain.Tema;
+import IngridOana.domain.Student;
+import IngridOana.domain.Tema;
 import org.junit.Before;
 import org.junit.Test;
-import repository.StudentRepository;
-import repository.TemaRepository;
-import validation.StudentValidator;
-import validation.TemaValidator;
+import IngridOana.repository.StudentRepository;
+import IngridOana.repository.TemaRepository;
+import IngridOana.validation.StudentValidator;
+import IngridOana.validation.TemaValidator;
 
 import java.util.List;
 import java.util.stream.Collectors;
