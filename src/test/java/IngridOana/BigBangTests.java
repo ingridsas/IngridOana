@@ -75,31 +75,31 @@ public class BigBangTests {
         List<Student> studenti = StreamSupport.stream(service.findAllStudents().spliterator(), false).collect(Collectors.toList());
         assertEquals(studenti.size(), 0);
         service.saveStudent("10", "Oana", 936);
-        assertEquals(studenti.size() + 1, 5);
+        assertEquals(studenti.size() + 1, 1);
     }
 
     @Test
     public void shouldAddNewGrade() {
         List<Nota> note = StreamSupport.stream(service.findAllNote().spliterator(), false).collect(Collectors.toList());
-        assertEquals(note.size(), 2);
+        assertEquals(note.size(), 0);
         service.saveNota("10", "3", 10.0, 1, "Oana este frumoasa si desteapta");
-        assertEquals(note.size() + 1, 3);
+        assertEquals(note.size() + 1, 1);
     }
 
     @Test
     public void shouldFailAddNewGrade() {
         List<Nota> note = StreamSupport.stream(service.findAllNote().spliterator(), false).collect(Collectors.toList());
-        assertEquals(note.size(), 2);
+        assertEquals(note.size(), 0);
         assertEquals(-1, service.saveNota("5", "3", 10.0, 1, "Oana este frumoasa si desteapta"));
-        assertEquals(note.size(), 2);
+        assertEquals(note.size(), 1);
     }
 
     @Test
     public void shouldAddAssignement() {
         List<Tema> teme = StreamSupport.stream(service.findAllTeme().spliterator(), false).collect(Collectors.toList());
-        assertEquals(teme.size(), 4);
+        assertEquals(teme.size(), 0);
         service.saveTema("4", "Sth", 4, 2);
-        assertEquals(teme.size() + 1, 5);
+        assertEquals(teme.size() + 1, 1);
     }
 
     @Test
