@@ -73,7 +73,7 @@ public class BigBangTests {
     @Test
     public void shouldAddStudent() {
         List<Student> studenti = StreamSupport.stream(service.findAllStudents().spliterator(), false).collect(Collectors.toList());
-        assertEquals(studenti.size(), 4);
+        assertEquals(studenti.size(), 0);
         service.saveStudent("10", "Oana", 936);
         assertEquals(studenti.size() + 1, 5);
     }
