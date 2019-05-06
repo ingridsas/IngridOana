@@ -108,4 +108,16 @@ public class BigBangTests {
         shouldAddNewGrade();
         shouldAddAssignement();
     }
+
+    @Test
+    public void incrementerA() {
+        shouldAddStudent(); //incrementer A
+    }
+
+    @Test
+    public void incrementerAB() {
+        shouldAddStudent(); //incrementer A
+        shouldAddNewGrade();//incrementer B
+    }
+
 }
